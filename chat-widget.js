@@ -5,8 +5,8 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 32.5px;
-      height: 32.5px;
+      width: 45px;
+      height: 45px;
       background-color: #20BDBE;
       border-radius: 50%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.25);
