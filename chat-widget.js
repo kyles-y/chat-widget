@@ -2,29 +2,25 @@
 const link = document.createElement('a');
 link.href = 'https://forms.fillout.com/t/eZLjjVsMS3us';
 link.target = '_blank';
+link.style.textDecoration = 'none';
 
-// Create image element
-const img = document.createElement('img');
-img.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v4.png';
-img.alt = 'Question Button';
-img.id = 'floating-button';
-img.style.position = 'fixed';
-img.style.bottom = '5px';
-img.style.right = '5px';
-img.style.width = '32.5px';
-img.style.height = '32.5px';
-img.style.opacity = '0';
-img.style.transition = 'opacity 1s ease';
-img.style.cursor = 'pointer';
-img.style.zIndex = '9999';
-
-// Append image to link, then to body
-link.appendChild(img);
-document.body.appendChild(link);
-
-// Fade in after load
-window.addEventListener('load', function () {
-  requestAnimationFrame(() => {
-    img.style.opacity = '1';
-  });
-});
+// Create button element (as a div)
+const button = document.createElement('div');
+button.textContent = '💬';
+button.style.position = 'fixed';
+button.style.bottom = '5px';
+button.style.right = '5px';
+button.style.width = '32.5px';
+button.style.height = '32.5px';
+button.style.backgroundColor = '#0089D0';
+button.style.color = 'white';
+button.style.display = 'flex';
+button.style.alignItems = 'center';
+button.style.justifyContent = 'center';
+button.style.borderRadius = '50%';
+button.style.fontSize = '18px';
+button.style.opacity = '0';
+button.style.transition = 'opacity 1s ease';
+button.style.cursor = 'pointer';
+button.style.zIndex = '9999';
+button
