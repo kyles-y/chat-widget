@@ -19,20 +19,20 @@
       transition: opacity 1s ease;
     }
     #sms-bubble img {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
     }
     #sms-bubble.show {
       opacity: 1;
     }
     @media (max-width: 600px) {
       #sms-bubble {
-        width: 50px;
-        height: 50px;
-      }
-      #sms-bubble img {
         width: 40px;
         height: 40px;
+      }
+      #sms-bubble img {
+        width: 28px;
+        height: 28px;
       }
     }
   `;
@@ -45,13 +45,12 @@
 
   const icon = document.createElement('img');
   icon.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v2.png';
-  icon.alt = 'Message Us';
+  icon.alt = 'Chat Icon';
   link.appendChild(icon);
 
   document.head.appendChild(style);
   document.body.appendChild(link);
 
-  // Trigger fade-in after DOM is ready
   window.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(() => {
       link.classList.add('show');
