@@ -1,48 +1,30 @@
-(function () {
-  const style = document.createElement('style');
-  style.textContent = `
-    #sms-bubble {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 33px;
-      height: 33px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
+// Create anchor element
+const link = document.createElement('a');
+link.href = 'https://forms.fillout.com/t/eZLjjVsMS3us';
+link.target = '_blank';
 
-    #sms-bubble img {
-      width: 100%;
-      height: 100%;
-    }
+// Create image element
+const img = document.createElement('img');
+img.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v4.png';
+img.alt = 'Question Button';
+img.id = 'floating-button';
+img.style.position = 'fixed';
+img.style.bottom = '5px';
+img.style.right = '5px';
+img.style.width = '65px';
+img.style.height = '65px';
+img.style.opacity = '0';
+img.style.transition = 'opacity 1s ease';
+img.style.cursor = 'pointer';
+img.style.zIndex = '9999';
 
-    #sms-bubble.show {
-      opacity: 1;
-    }
+// Append image to link, then to body
+link.appendChild(img);
+document.body.appendChild(link);
 
-    @media (max-width: 600px) {
-      #sms-bubble {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  `;
-
-  const link = document.createElement('a');
-  link.id = 'sms-bubble';
-  link.setAttribute('aria-label', 'Contact the YMCA');
-  link.href = 'https://forms.fillout.com/t/eZLjjVsMS3us';
-  link.target = '_blank';
-
-  const icon = document.createElement('img');
-  icon.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v3.png';
-  icon.alt = 'Contact Us';
-  link.appendChild(icon);
-
-  document.head.appendChild(style);
-  document.body.appendChild(link);
+// Fade in after load
+window.addEventListener('load', function () {
+  requestAnimationFrame(() => {
+    img.style.opacity = '1';
+  });
+});
