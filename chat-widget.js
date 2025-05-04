@@ -5,8 +5,8 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       background-color: #20BDBE;
       border-radius: 50%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.25);
@@ -19,20 +19,20 @@
       transition: opacity 1s ease;
     }
     #sms-bubble img {
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
     }
     #sms-bubble.show {
       opacity: 1;
     }
     @media (max-width: 600px) {
       #sms-bubble {
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
       }
       #sms-bubble img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
       }
     }
   `;
