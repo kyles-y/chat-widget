@@ -7,9 +7,6 @@
       right: 20px;
       width: 33px;
       height: 33px;
-      background-color: #20BDBE;
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
       z-index: 9999;
       display: flex;
       align-items: center;
@@ -18,21 +15,20 @@
       opacity: 0;
       transition: opacity 1s ease;
     }
+
     #sms-bubble img {
-      width: 20px;
-      height: 20px;
+      width: 100%;
+      height: 100%;
     }
+
     #sms-bubble.show {
       opacity: 1;
     }
+
     @media (max-width: 600px) {
       #sms-bubble {
         width: 40px;
         height: 40px;
-      }
-      #sms-bubble img {
-        width: 28px;
-        height: 28px;
       }
     }
   `;
@@ -44,16 +40,9 @@
   link.target = '_blank';
 
   const icon = document.createElement('img');
-  icon.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v2.png';
-  icon.alt = 'Chat Icon';
+  icon.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v3.png';
+  icon.alt = 'Contact Us';
   link.appendChild(icon);
 
   document.head.appendChild(style);
   document.body.appendChild(link);
-
-  window.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(() => {
-      link.classList.add('show');
-    });
-  });
-})();
