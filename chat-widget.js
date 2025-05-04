@@ -5,8 +5,8 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 40px;
-      height: 40px;
+      width: 33px;
+      height: 33px;
       background-color: #20BDBE;
       border-radius: 50%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.25);
@@ -27,8 +27,8 @@
     }
     @media (max-width: 600px) {
       #sms-bubble {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
       }
       #sms-bubble img {
         width: 30px;
