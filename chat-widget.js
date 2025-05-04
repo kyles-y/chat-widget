@@ -27,12 +27,12 @@
     }
     @media (max-width: 600px) {
       #sms-bubble {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
       }
       #sms-bubble img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
       }
     }
   `;
