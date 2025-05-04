@@ -44,7 +44,7 @@
   link.target = '_blank';
 
   const icon = document.createElement('img');
-  icon.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question.png';
+  icon.src = 'https://thechurchco-production.s3.amazonaws.com/uploads/sites/1717/2025/05/question-v2.png';
   icon.alt = 'Text Us';
   link.appendChild(icon);
 
